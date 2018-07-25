@@ -1,15 +1,21 @@
 FROM python:2-alpine
 MAINTAINER Rija Menage <rija+dockerfiles@cinecinetique.com>
 
-# RUN pip install buster
-RUN pip install future
-RUN pip install python-dateutil --upgrade
-RUN pip install pytz --upgrade
-RUN pip install docopt
-RUN pip install gitpython
-RUN pip install pyquery
-RUN pip install git+https://github.com/rija/buster
+RUN apk update && \
+    apk upgrade && \
+    apk add --update --no-cache gcc libxml2 libxml2-dev libxslt libxslt-dev python2-dev musl-dev git wget && \
 
+pip install future && \
+pip install python-dateutil --upgrade && \
+pip install pytz --upgrade && \
+pip install docopt && \
+pip install gitpython && \
+pip install pyquery && \
+pip install git+https://github.com/rija/buster && \
+apk del gcc libxml2-dev libxslt-dev python2-dev musl-dev
+
+ENTRYPOINT ["/usr/local/bin/buster"]
+CMD ["generate"]
 
 # Build-time metadata as defined at http://label-schema.org
 ARG BUILD_DATE
