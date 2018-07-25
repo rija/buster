@@ -1,4 +1,4 @@
-Buster (Seb's fork)
+Buster (Rija's fork)
 ===================
 
 Super simple, totally awesome, brute force **static site generator for**
@@ -11,6 +11,29 @@ Start with a clean, no commits Github repository.
 Warning! This project is a hack. It's not official. But it works for me.
 
 About this fork
+============
+
+The plan is to remove any Github related feature (setup, deploy, add-domain)
+so that it's remote hosting agnostic (I use GitLab).
+
+Although the tasks of setup, deploy are someting I need, I've got those needs
+happily covered in the project that I'm using this tool with.
+
+
+I also supply a Dockerfile for a single process, lightweight container for Buster.
+
+I will also remove the preview functionality that use an embedded HTTP server  as:
+
+ * I can just opened the genereated html page in a web browser
+ * I use an Nginx container for local preview in the project that I use this tool for.
+
+Ultimately, this fork of Buster will only do one thing: generate static web pages
+from a locally running Ghost instance. No more, no less.
+
+
+
+
+About the parent fork
 ============
 
 This is a work in progress containing many of the pull requests made to the
@@ -112,6 +135,6 @@ Inspired by THE GhostBusters.
 Contributing
 ------------
 
-Checkout the existing `issues <https://github.com/skosch/buster/issues>`__ or create a new one.
+Checkout the existing `issues <https://github.com/rija/buster/issues>`__ or create a new one.
  Pull requests welcome (actually, this time)!
 
