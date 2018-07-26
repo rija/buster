@@ -1,140 +1,49 @@
 Buster (Rija's fork)
 ===================
 
-Super simple, totally awesome, brute force **static site generator for**
-`Ghost <http://ghost.org>`__.
+Super simple, totally awesome, brute force **static site generator (SSG)** 
+for `Ghost <https://ghost.org/>`_
 
-Start with a clean, no commits Github repository.
-
-*Generate Static Pages. Preview. Deploy to Github Pages.*
-
-Warning! This project is a hack. It's not official. But it works for me.
 
 About this fork
 ============
 
-The plan is to remove any Github related feature (setup, deploy, add-domain)
-so that it's remote hosting agnostic (I use GitLab).
+The plan is to remove Git/Github integration, so that it can be used to publish
+Ghost's exported content anywhere (GitLab in my case).
 
-Although the tasks of setup, deploy are someting I need, I've got those needs
-happily covered in the project that I'm using this tool with.
+Furthermore, some people seem to be using this tool as part of a publishing
+pipeline/system that are more suited to handle the detail of configuration
+and deployment, so the deploy function will go as well.
+
+**Ultimately, I aim for this tool to be very simple and focused,
+with single responsibily and not tied to a publishing platform.**
+
+There is a Dockerfile to make a lightweight, single process docker image to
+provide a Ghost SSG container functionality to be composed in container-based
+SSG pipelines.
+(e.g: my `Ghost-to-GitLab <https://gitlab.com/rijam/docker-ghost-buster>`_ project)
+
+Eventually, I'll pull in some of the workarounds used downstream to fix some of
+the tool's issues.
+
+Also part of the plan, is to improve code quality, which start with improving
+test coverage.
+
+Very much a work in progress, code is a hack/mess and I'm new to Python, so
+better not use this fork, or do so at your own risk.
 
 
-I also supply a Dockerfile for a single process, lightweight container for Buster.
-
-I will also remove the preview functionality that use an embedded HTTP server  as:
-
- * I can just opened the genereated html page in a web browser
- * I use an Nginx container for local preview in the project that I use this tool for.
-
-Ultimately, this fork of Buster will only do one thing: generate static web pages
-from a locally running Ghost instance. No more, no less.
-
-
-
-
-About the parent fork
+About the original
 ============
 
-This is a work in progress containing many of the pull requests made to the
-original buster repo (which unfortunately has been abandoned by its author).
+The `original project <https://github.com/axitkhurana/buster>`_ seems now abandoned by its author (@axitkhurana).
 
-It includes most of the changes by
+Since then, many people have created their own fork.
+My fork came from: ``axitkhurana -> skosch -> dariosky``
 
-* petemichel77
-* Misiur
-* Jeongseok Son
-* raccoony
-* leftofnull
-* alokard
-* dariosky
-
-It should also work with static pages (e.g. `about`, `tag/...`, etc.).
-
-There may well be issues still, especially around Windows compatibility; I'm
-happy to merge your PRs.
-
-Installation
-===========
-With `pip` installed, simply run
-
-``pip install git+https://github.com/skosch/buster``
-
-You could also just clone the source and use the ``buster.py`` file directly.
+The original is still available as `a Pypi package <https://pypi.org/project/buster/>`_
 
 
-The interface
--------------
 
-``setup [--gh-repo=<repo-url>]``
 
-      Creates a GIT repository inside ``static/`` directory.
-
-``generate [--domain=<local-address>]``
-
-      Generates static pages from locally running Ghost instance.
-
-``preview``
-
-      Preview what's generated on ``localhost:9000``.
-
-``deploy``
-
-      Commits and deploys changes static files to Github repository.
-
-``add-domain <domain-name>``
-
-      Adds CNAME file with custom domain name as required by Github
-Pages.
-
-Buster assumes you have ``static/`` folder in your current directory (or
-creates one during ``setup`` command). You can specify custom directory
-path using ``[--dir=<path>]`` option to any of the above commands.
-
-Don't forget to change your blog URL in config.js in Ghost.
-
-Requirements
-------------
-
--  wget: Use ``brew install wget`` to install wget on your Mac.
-   Available by default on most linux distributions.
-
--  git: Use ``brew install git`` to install git on your Mac.
-   ``sudo apt-get install git`` on ubuntu/debian
-
-The following python packages would be installed automatically when
-installed via ``pip``:
-
--  `docopt <https://github.com/docopt/docopt>`__: Creates beautiful
-   command line interfaces *easily*.
--  `GitPython <https://github.com/gitpython-developers/GitPython>`__:
-   Python interface for GIT.
-
-Ghost. What?
-------------
-
-`Ghost <http://ghost.org/features/>`__ is a beautifully designed,
-completely customisable and completely `Open
-Source <https://github.com/TryGhost/Ghost>`__ **Blogging Platform**. If
-you haven't tried it out yet, check it out. You'll love it.
-
-The Ghost Foundation is not-for-profit organization funding open source
-software and trying to completely change the world of online publishing.
-Consider `donating to Ghost <http://ghost.org/about/donate/>`__.
-
-Buster?
-~~~~~~~
-
-Inspired by THE GhostBusters.
-
-.. figure:: http://upload.wikimedia.org/wikipedia/en/c/c7/Ghostbusters_cover.png
-   :alt: Ghost Buster Movie Poster
-
-   Ghost Buster Movie
-
-Contributing
-------------
-
-Checkout the existing `issues <https://github.com/rija/buster/issues>`__ or create a new one.
- Pull requests welcome (actually, this time)!
 
