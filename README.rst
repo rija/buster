@@ -1,3 +1,6 @@
+
+<div>
+
 <a href="https://hub.docker.com/r/rija/buster/" title="Automated build Docker image for rija/buster"><img src="https://images.microbadger.com/badges/image/rija/buster.svg" alt="Layers/Size of Docker image for rija/buster"></a>
 
 <a href="https://hub.docker.com/r/rija/buster/tags/" title="Latest build Docker image for rija/buster"><img src="https://images.microbadger.com/badges/version/rija/buster.svg" alt="Latest version of Docker images for rija/buster"></a>
@@ -7,7 +10,7 @@
 <a href="https://gitlab.com/rijam/buster/commits/master"><img alt="coverage report" src="https://gitlab.com/rijam/buster/badges/master/coverage.svg" /></a>
 
 
-
+</div>
 
 
 Buster (Rija's fork)
