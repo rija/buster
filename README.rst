@@ -1,5 +1,9 @@
-.. image:: https://images.microbadger.com/badges/image/rija/buster.svg
+.. image:: https://img.shields.io/badge/docker%20hub-automated%20build-ff69b4.svg
    :alt: Automated build Docker image for rija/buster
+   :target: https://hub.docker.com/r/rija/buster/
+
+.. image:: https://images.microbadger.com/badges/image/rija/buster.svg
+   :alt: Layers and size of Docker image for rija/buster
    :target: https://hub.docker.com/r/rija/buster/
 
 .. image:: https://images.microbadger.com/badges/version/rija/buster.svg
