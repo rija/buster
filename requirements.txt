@@ -9,3 +9,4 @@ docopt
 future
 
 pytest
+tox
