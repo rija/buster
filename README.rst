@@ -1,20 +1,26 @@
+.. image:: https://images.microbadger.com/badges/image/rija/buster.svg
+   :alt: Automated build Docker image for rija/buster
+   :target: https://hub.docker.com/r/rija/buster/
 
-<div>
-
-<a href="https://hub.docker.com/r/rija/buster/" title="Automated build Docker image for rija/buster"><img src="https://images.microbadger.com/badges/image/rija/buster.svg" alt="Layers/Size of Docker image for rija/buster"></a>
-
-<a href="https://hub.docker.com/r/rija/buster/tags/" title="Latest build Docker image for rija/buster"><img src="https://images.microbadger.com/badges/version/rija/buster.svg" alt="Latest version of Docker images for rija/buster"></a>
-
-<a href="https://gitlab.com/rijam/buster/commits/master"><img alt="pipeline status" src="https://gitlab.com/rijam/buster/badges/master/pipeline.svg" /></a>
-
-<a href="https://gitlab.com/rijam/buster/commits/master"><img alt="coverage report" src="https://gitlab.com/rijam/buster/badges/master/coverage.svg" /></a>
+.. image:: https://images.microbadger.com/badges/version/rija/buster.svg
+   :alt: Latest build Docker image for rija/buster
+   :target: https://hub.docker.com/r/rija/buster/tags/
 
 
-</div>
+.. image:: https://gitlab.com/rijam/buster/badges/master/pipeline.svg
+   :alt: Pipeline status
+   :target: https://gitlab.com/rijam/buster/commits/master
+
+
+.. image:: https://gitlab.com/rijam/buster/badges/master/coverage.svg
+   :alt: Coverage report
+   :target: https://gitlab.com/rijam/buster/commits/master
+
 
 
 Buster (Rija's fork)
 ===================
+
 
 Super simple, totally awesome, brute force **static site generator (SSG)** 
 for `Ghost <https://ghost.org/>`_
