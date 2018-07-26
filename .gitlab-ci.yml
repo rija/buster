@@ -17,7 +17,7 @@ sast:
 
 
 test:
-  image: docker:stable
+  image: python:2.7
   stage: test
   before_script:
     - pip install -r requirements.txt
