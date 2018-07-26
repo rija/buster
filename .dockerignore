@@ -1,0 +1,6 @@
+.git
+.dockerignore
+.gitlab-ci.yml
+.envrc
+.python-version
+*.pyc
