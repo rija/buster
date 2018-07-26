@@ -4,11 +4,11 @@
 
 .. image:: https://images.microbadger.com/badges/image/rija/buster.svg
    :alt: Layers and size of Docker image for rija/buster
-   :target: https://hub.docker.com/r/rija/buster/
+   :target: https://microbadger.com/images/rija/buster
 
 .. image:: https://images.microbadger.com/badges/version/rija/buster.svg
    :alt: Latest build Docker image for rija/buster
-   :target: https://hub.docker.com/r/rija/buster/tags/
+   :target: https://hub.docker.com/r/rija/buster/
 
 
 .. image:: https://gitlab.com/rijam/buster/badges/master/pipeline.svg
