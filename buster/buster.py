@@ -73,12 +73,16 @@ def main():
     base_command = ("wget "
                     "--level {0} "  # recursion depth
                     "--recursive "  # follow links to download entire site
+                    "--tries=3 "  # retry 3 times if connection fails (default 20)
                     "{1} "  # make links relative
                     "--page-requisites "  # grab everything: css / inlined images
                     "--no-parent "  # don't go to parent level
+                    "--no-verbose "  # not quite verbose
                     "--directory-prefix {2} "  # download contents to static/ folder
                     "--no-host-directories "  # don't create domain named folder
                     "--restrict-file-name={3} "  # don't escape query string
+                    "--rejected-log=/static/rejections.csv "  # don't escape query string
+                    "--header=\"Host: http://localhost:2368\" "  # don't escape query string
                     ).format(arguments['--level'],
                              ('' if is_windows else '--convert-links'),
                              static_path,
@@ -98,8 +102,8 @@ def main():
         ):
             result = os.system(base_command + path.format(domain))
             if result > 0:
-                raise IOError('Your ghost server is dead.'
-                              'Cannot access %s' % path.format(domain))
+                raise IOError("wget has returned with a non-zero status"
+                              "Cannot access %s" % path.format(domain))
 
         def pullRss(path):
             if path is None:
